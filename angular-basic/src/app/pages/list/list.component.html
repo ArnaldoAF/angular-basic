@@ -1,1 +1,21 @@
-<p>list works!</p>
+<div class="container mt-5 pt-5">
+    <h2>List</h2>
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Phone</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let element of list">
+                <td>{{ element.id }}</td>
+                <td>{{ element.name }}</td>
+                <td>{{ element.email }}</td>
+                <td>{{ element.phone }}</td>
+                <td><a [routerLink]="['element/edit',element.id]">Edit</a> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
